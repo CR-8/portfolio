@@ -144,27 +144,27 @@ const About = () => {
                     </div>
 
                     {/* Bento Grid Highlights */}
-                    <div className="highlights-grid grid sm:grid-cols-2 gap-3">
+                    <div className="highlights-grid grid sm:grid-cols-2 gap-5">
                         {highlights.map((item, index) => (
                             <motion.div
                                 key={item.title}
-                                className="highlight-card bg-zinc-900/80 p-5 rounded-lg border border-zinc-800 hover:border-zinc-700 transition-all duration-300"
+                                className="highlight-card bg-zinc-900/80 p-7 rounded-lg border border-zinc-800 hover:border-zinc-700 transition-all duration-300 flex flex-col h-full"
                                 initial={{ opacity: 0, y: 15 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.08 }}
                                 viewport={{ once: true }}
-                                whileHover={{ y: -3 }}
+                                whileHover={{ y: -5 }}
                             >
-                                <div className="mb-3">
+                                <div className="mb-4">
                                     <item.icon 
-                                        size={20} 
-                                        className="text-zinc-400" 
+                                        size={28} 
+                                        className="text-zinc-300" 
                                     />
                                 </div>
-                                <h4 className="text-sm font-mono font-medium text-white mb-2">
+                                <h4 className="text-base font-mono font-medium text-white mb-3">
                                     {item.title}
                                 </h4>
-                                <p className="text-zinc-500 text-xs leading-relaxed">
+                                <p className="text-zinc-400 text-sm leading-relaxed">
                                     {item.description}
                                 </p>
                             </motion.div>
